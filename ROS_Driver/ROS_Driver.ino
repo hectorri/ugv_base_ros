@@ -17,7 +17,8 @@ StaticJsonDocument<1024> jsonInfoHttp;
 #include <PID_v2.h>
 #include <SimpleKalmanFilter.h>
 #include <math.h>
-#include "ICM_20948.h"
+#include "Waveshare_10Dof-D.h"
+// #include "ICM_20948.h"
 
 // functions for barrery info.
 #include "battery_ctrl.h"

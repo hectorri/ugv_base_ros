@@ -398,7 +398,7 @@ double ay_offset = 0;
 double az_offset = 0;
 double accel_h = 0.01;
 
-double q0, q1, q2, q3, q2sqr, t0, t1, t2, t3, t4;
+double icm_q0, icm_q1, icm_q2, icm_q3, q2sqr, t0, t1, t2, t3, t4;
 
 float max_ax = 0;
 float min_ax = 0;

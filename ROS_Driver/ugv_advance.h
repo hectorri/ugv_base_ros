@@ -390,10 +390,10 @@ void baseInfoFeedback() {
 	jsonInfoHttp["p"] = icm_pitch;
 	jsonInfoHttp["y"] = icm_yaw;
 
-	jsonInfoHttp["q0"] = q0;
-	jsonInfoHttp["q1"] = q1;
-	jsonInfoHttp["q2"] = q2;
-	jsonInfoHttp["q3"] = q3;
+	jsonInfoHttp["q0"] = icm_q0;
+	jsonInfoHttp["q1"] = icm_q1;
+	jsonInfoHttp["q2"] = icm_q2;
+	jsonInfoHttp["q3"] = icm_q3;
 
 	jsonInfoHttp["ax"] = ax;
 	jsonInfoHttp["ay"] = ay;
@@ -410,13 +410,13 @@ void baseInfoFeedback() {
 
 	switch(moduleType) {
 	case 1:
-		jsonInfoHttp["ax"] = lastX;
-		jsonInfoHttp["ay"] = lastY;
-		jsonInfoHttp["az"] = lastZ;
-		jsonInfoHttp["ab"] = radB;
-		jsonInfoHttp["as"] = radS;
-		jsonInfoHttp["ae"] = radE;
-		jsonInfoHttp["at"] = lastT;
+		jsonInfoHttp["mx"] = lastX;
+		jsonInfoHttp["my"] = lastY;
+		jsonInfoHttp["mz"] = lastZ;
+		jsonInfoHttp["mb"] = radB;
+		jsonInfoHttp["ms"] = radS;
+		jsonInfoHttp["me"] = radE;
+		jsonInfoHttp["mt"] = lastT;
 		jsonInfoHttp["torB"] = servoFeedback[BASE_SERVO_ID - 11].load;
 		jsonInfoHttp["torS"] = servoFeedback[SHOULDER_DRIVING_SERVO_ID - 11].load - servoFeedback[SHOULDER_DRIVEN_SERVO_ID - 11].load;
 		jsonInfoHttp["torE"] = servoFeedback[ELBOW_SERVO_ID - 11].load;
